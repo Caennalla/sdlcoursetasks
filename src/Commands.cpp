@@ -144,6 +144,106 @@ CommandUtils::Parse( const std::string & input )
   return new NullCommand();
 }
 ////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+Command *
+CommandUtils::Parse( const SDL_Event & event)
+{
+
+  Room *current = g_Game.GetCurrentRoom();
+  switch (event.type){
+	case SDL_QUIT:
+		return new QuitCommand();
+		break;
+	case SDL_KEYDOWN:
+		if(event.key.keysym.sym == SDLK_ESCAPE){
+			return new QuitCommand();
+			break;
+		}
+		else if(event.key.keysym.sym == SDLK_s || event.key.keysym.sym == SDLK_DOWN){
+			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
+			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			return pCmd;
+			break;
+		}
+		else if(event.key.keysym.sym == SDLK_w || event.key.keysym.sym == SDLK_UP){
+			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
+			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.key.keysym.sym == SDLK_a || event.key.keysym.sym == SDLK_LEFT){
+			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
+			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.key.keysym.sym == SDLK_d || event.key.keysym.sym == SDLK_RIGHT){
+			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
+			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			return pCmd;
+			break;
+		}
+	case SDL_JOYBUTTONDOWN:
+		if(event.jbutton.button == 1){
+			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
+			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			return pCmd;
+			break;
+		}
+		else if(event.jbutton.button == 0){
+			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
+			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.jbutton.button == 2){
+			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
+			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.jbutton.button == 3){
+			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
+			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			return pCmd;
+			break;
+		}
+		//In Xbox360 controller this is the button X
+		else if(event.jbutton.button == 12){
+			return new QuitCommand();
+			break;
+		}
+	case SDL_JOYHATMOTION:
+		if(event.jhat.value == SDL_HAT_DOWN){
+			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
+			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			return pCmd;
+			break;
+		}
+		else if(event.jhat.value == SDL_HAT_UP){
+			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
+			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.jhat.value == SDL_HAT_LEFT){
+			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
+			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			return pCmd;
+			break;
+		}
+		else if(event.jhat.value == SDL_HAT_RIGHT){
+			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
+			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			return pCmd;
+			break;
+		}
+		
+		
+  }
+  return new NullCommand();
+}
+////////////////////////////////////////////////////////////////////////////////
 void 
 UseCommand::Execute( CommandHandler & handler )
 { 

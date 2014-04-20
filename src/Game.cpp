@@ -62,46 +62,49 @@ Game::~Game()
 ////////////////////////////////////////////////////////////////////////////////
 void Game::Play()
 {
-  //Initializes the SDL components
-  if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
-	std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
-  }
-  //Creates the window for the splash screen
-  SDL_Window *win = SDL_CreateWindow("Quickescape", 100, 100, 640, 400,
-	SDL_WINDOW_SHOWN);
-  if (win == nullptr){
-	std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
-  }
-  //Creates the renderer element for the given window
-  SDL_Renderer *ren = SDL_CreateRenderer(win, -1, 
-	SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-  if (ren == nullptr){
-	std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
+  const string title = "Quickescape";
+  //Creates a new SDLApp, so we can use the functions; also initializes SDL
+  SDLApp * SDLMain = new SDLApp();
+  //This function creates the window and renderer
+  SDLMain->Init(title, 640, 400);
+  //We set the background 
+  SDL_SetRenderDrawColor(SDLMain->GetRenderer(), 0,0,0,0);
+  SDL_RenderClear(SDLMain->GetRenderer());
+  //Splash image
+  SDL_Texture* splash = SDLMain->LoadTexture("res/main.bmp");
+  SDLMain->Load(splash);
+  SDLMain->Render();
+  SDL_Delay(3000);
+  delete SDLMain;
+  
+  //Creates the main game screen
+  SDLApp *SDLGame = new SDLApp();
+  SDLGame->Init(title, 1000, 700);
+  SDL_SetRenderDrawColor(SDLMain->GetRenderer(), 0,0,0,0);
+  SDL_RenderClear(SDLMain->GetRenderer());
+  
+  
+  
+  //Clears the first image
+  SDL_SetRenderDrawColor(SDLGame->GetRenderer(), 0,0,0,0);
+  SDLGame->Render();
+  //Textures for all the other images used
+  SDL_Texture* cover = SDLGame->LoadTexture("res/cover.png");
+  SDL_Texture* pages = SDLGame->LoadTexture("res/pages.png");
+  //Loads the starting screen
+  SDLGame->Load(cover);
+  SDLGame->Load(pages);
+  //Texture for the player
+  SDL_Texture* plrtex = SDLGame->LoadTexture("res/player0.png");
+  //Load the player, for now the player will always start from the middle
+  GetPlayer().Sety(350);
+  GetPlayer().Setx(500);
+  SDLGame->LoadPlayer(plrtex, GetPlayer().Getx(), GetPlayer().Gety());
+  SDLGame->Render();
+  
 
-  }
-  //Creates a surface with the image in it
-  SDL_Surface *bmp = SDL_LoadBMP("res/main.bmp");
-  if (bmp == nullptr){
-	std::cout << "SDL_LoadBMP Error: " << SDL_GetError() << std::endl;
-  }
-  //Creates a texture from the surface that will work with the renderer
-  SDL_Texture *tex = SDL_CreateTextureFromSurface(ren, bmp);
-  SDL_FreeSurface(bmp);
-  if (tex == nullptr){
- 	std::cout << "SDL_CreateTextureFromSurface Error: "
-		<< SDL_GetError() << std::endl;
-  }
-  //This will clear the scrup from renderer first and then copy the texture over it
-  SDL_RenderClear(ren);
-  SDL_RenderCopy(ren, tex, NULL, NULL);
-  SDL_RenderPresent(ren);
-  //2-second delay for the picture
-  SDL_Delay(2000);
-  //After the delay all the SDL elements will be destroyed and quit
-  SDL_DestroyTexture(tex);
-  SDL_DestroyRenderer(ren);
-  SDL_DestroyWindow(win);
-  SDL_Quit();
+  
+  
   //The original game starts
   LoadMap("res/dungeon0.xml");
   CommandUtils::Load("res/commands.xml");
@@ -127,18 +130,16 @@ void Game::Play()
     {    
       room.SetProperty("visited", true);
     }  
-    
-    cout << "> ";
-
-    string tmp;
-    getline(cin,tmp);
-    
-    Command *pCmd = CommandUtils::Parse(tmp);
-    pCmd->Execute(*this);
-    delete pCmd;
-    
+	
+    HandleInput();
+	SDLGame->Load(cover);
+	SDLGame->Load(pages);
+	SDLGame->LoadPlayer(plrtex, GetPlayer().Getx(), GetPlayer().Gety());
+	SDLGame->Render();
   }  
-  Save("res/dungeon0.xml");
+  
+  delete SDLGame;
+  //Save("res/dungeon0.xml");
 
 }
 ////////////////////////////////////////////////////////////////////////////////

@@ -10,11 +10,26 @@
 class Player : public GameObject,
 	       public NOPCommandHandler
 {
+private:
+  int playerx;
+  int playery;
 public:
-  void Save( tinyxml2::XMLPrinter & p);
-  void Execute( UseCommand & cmd );
-  void Execute( InventoryCommand & cmd );
-  void Execute( ExamineCommand & cmd );
+	int Getx(){
+		return playerx;
+	}
+	void Setx(int newx){
+		playerx = newx;
+	}
+	int Gety(){
+		return playery;
+	}
+	void Sety(int newy){
+		playery = newy;
+	}
+	void Save( tinyxml2::XMLPrinter & p);
+	void Execute( UseCommand & cmd );
+	void Execute( InventoryCommand & cmd );
+	void Execute( ExamineCommand & cmd );
 };
 ////////////////////////////////////////////////////////////////////////////////
 #endif
