@@ -1,0 +1,316 @@
+The system is: Windows - 6.1 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/Kouluhommia/MinGW/bin/g++.exe 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/2.8.12.1/CompilerIdCXX/a.exe"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec1364914895/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec1364914895.dir\build.make CMakeFiles/cmTryCompileExec1364914895.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1364914895.dir/testCXXCompiler.cxx.obj
+D:\Kouluhommia\MinGW\bin\g++.exe     -o CMakeFiles\cmTryCompileExec1364914895.dir\testCXXCompiler.cxx.obj -c D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1364914895.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec1364914895.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec1364914895.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec1364914895.dir/objects.a @CMakeFiles\cmTryCompileExec1364914895.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\g++.exe       -Wl,--whole-archive CMakeFiles\cmTryCompileExec1364914895.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec1364914895.exe -Wl,--out-implib,libcmTryCompileExec1364914895.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec1794627019/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec1794627019.dir\build.make CMakeFiles/cmTryCompileExec1794627019.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1794627019.dir/CMakeCXXCompilerABI.cpp.obj
+D:\Kouluhommia\MinGW\bin\g++.exe     -o CMakeFiles\cmTryCompileExec1794627019.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\Kouluhommia\programs\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTryCompileExec1794627019.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec1794627019.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec1794627019.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec1794627019.dir/objects.a @CMakeFiles\cmTryCompileExec1794627019.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTryCompileExec1794627019.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec1794627019.exe -Wl,--out-implib,libcmTryCompileExec1794627019.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
+Using built-in specs.
+COLLECT_GCC=D:\Kouluhommia\MinGW\bin\g++.exe
+COLLECT_LTO_WRAPPER=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/lto-wrapper.exe
+Target: mingw32
+Configured with: ../gcc-4.8.1/configure --prefix=/mingw --host=mingw32 --build=mingw32 --without-pic --enable-shared --enable-static --with-gnu-ld --enable-lto --enable-libssp --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,ada --disable-sjlj-exceptions --with-dwarf2 --disable-win32-registry --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gmp=/usr/src/pkg/gmp-5.1.2-1-mingw32-src/bld --with-mpc=/usr/src/pkg/mpc-1.0.1-1-mingw32-src/bld --with-mpfr= --with-system-zlib --with-gnu-as --enable-decimal-float=yes --enable-libgomp --enable-threads --with-libiconv-prefix=/mingw32 --with-libintl-prefix=/mingw --disable-bootstrap LDFLAGS=-s CFLAGS=-D_USE_32BIT_TIME_T
+Thread model: win32
+gcc version 4.8.1 (GCC) 
+COMPILER_PATH=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/;d:/kouluhommia/mingw/bin/../libexec/gcc/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/
+LIBRARY_PATH=d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/;d:/kouluhommia/mingw/bin/../lib/gcc/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1794627019.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro'
+ d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTryCompileExec1794627019.exe d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1 -Ld:/kouluhommia/mingw/bin/../lib/gcc -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../.. --whole-archive CMakeFiles\cmTryCompileExec1794627019.dir/objects.a --no-whole-archive --out-implib libcmTryCompileExec1794627019.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec1794627019/fast"]
+  ignore line: [D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec1794627019.dir\build.make CMakeFiles/cmTryCompileExec1794627019.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp']
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1794627019.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [D:\Kouluhommia\MinGW\bin\g++.exe     -o CMakeFiles\cmTryCompileExec1794627019.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\Kouluhommia\programs\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTryCompileExec1794627019.exe]
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec1794627019.dir\link.txt --verbose=1]
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec1794627019.dir/objects.a]
+  ignore line: [D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec1794627019.dir/objects.a @CMakeFiles\cmTryCompileExec1794627019.dir\objects1.rsp]
+  ignore line: [D:\Kouluhommia\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTryCompileExec1794627019.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec1794627019.exe -Wl,--out-implib,libcmTryCompileExec1794627019.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=D:\Kouluhommia\MinGW\bin\g++.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/lto-wrapper.exe]
+  ignore line: [Target: mingw32]
+  ignore line: [Configured with: ../gcc-4.8.1/configure --prefix=/mingw --host=mingw32 --build=mingw32 --without-pic --enable-shared --enable-static --with-gnu-ld --enable-lto --enable-libssp --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,ada --disable-sjlj-exceptions --with-dwarf2 --disable-win32-registry --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gmp=/usr/src/pkg/gmp-5.1.2-1-mingw32-src/bld --with-mpc=/usr/src/pkg/mpc-1.0.1-1-mingw32-src/bld --with-mpfr= --with-system-zlib --with-gnu-as --enable-decimal-float=yes --enable-libgomp --enable-threads --with-libiconv-prefix=/mingw32 --with-libintl-prefix=/mingw --disable-bootstrap LDFLAGS=-s CFLAGS=-D_USE_32BIT_TIME_T]
+  ignore line: [Thread model: win32]
+  ignore line: [gcc version 4.8.1 (GCC) ]
+  ignore line: [COMPILER_PATH=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/]
+  ignore line: [d:/kouluhommia/mingw/bin/../libexec/gcc/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/]
+  ignore line: [LIBRARY_PATH=d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1794627019.exe' '-shared-libgcc' '-mtune=generic' '-march=pentiumpro']
+  link line: [ d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTryCompileExec1794627019.exe d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1 -Ld:/kouluhommia/mingw/bin/../lib/gcc -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../.. --whole-archive CMakeFiles\cmTryCompileExec1794627019.dir/objects.a --no-whole-archive --out-implib libcmTryCompileExec1794627019.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o]
+    arg [d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-u] ==> ignore
+    arg [___register_frame_info] ==> ignore
+    arg [-u] ==> ignore
+    arg [___deregister_frame_info] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec1794627019.exe] ==> ignore
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o] ==> ignore
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o] ==> ignore
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTryCompileExec1794627019.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTryCompileExec1794627019.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1] ==> [d:/Kouluhommia/MinGW/lib/gcc/mingw32/4.8.1]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc] ==> [d:/Kouluhommia/MinGW/lib/gcc]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib] ==> [d:/Kouluhommia/MinGW/mingw32/lib]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..] ==> [d:/Kouluhommia/MinGW/lib]
+  implicit libs: [stdc++;mingw32;moldname;mingwex;msvcrt;advapi32;shell32;user32;kernel32;mingw32;moldname;mingwex;msvcrt]
+  implicit dirs: [d:/Kouluhommia/MinGW/lib/gcc/mingw32/4.8.1;d:/Kouluhommia/MinGW/lib/gcc;d:/Kouluhommia/MinGW/mingw32/lib;d:/Kouluhommia/MinGW/lib]
+  implicit fwks: []
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: D:/Kouluhommia/MinGW/bin/gcc.exe 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+
+The C compiler identification is GNU, found in "D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/2.8.12.1/CompilerIdC/a.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec4216213675/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec4216213675.dir\build.make CMakeFiles/cmTryCompileExec4216213675.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4216213675.dir/testCCompiler.c.obj
+D:\Kouluhommia\MinGW\bin\gcc.exe    -o CMakeFiles\cmTryCompileExec4216213675.dir\testCCompiler.c.obj   -c D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTryCompileExec4216213675.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec4216213675.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec4216213675.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec4216213675.dir/objects.a @CMakeFiles\cmTryCompileExec4216213675.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTryCompileExec4216213675.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec4216213675.exe -Wl,--out-implib,libcmTryCompileExec4216213675.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec4253995593/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec4253995593.dir\build.make CMakeFiles/cmTryCompileExec4253995593.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4253995593.dir/CMakeCCompilerABI.c.obj
+D:\Kouluhommia\MinGW\bin\gcc.exe    -o CMakeFiles\cmTryCompileExec4253995593.dir\CMakeCCompilerABI.c.obj   -c "D:\Kouluhommia\programs\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"
+Linking C executable cmTryCompileExec4253995593.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec4253995593.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec4253995593.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec4253995593.dir/objects.a @CMakeFiles\cmTryCompileExec4253995593.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTryCompileExec4253995593.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec4253995593.exe -Wl,--out-implib,libcmTryCompileExec4253995593.dll.a -Wl,--major-image-version,0,--minor-image-version,0   
+Using built-in specs.
+COLLECT_GCC=D:\Kouluhommia\MinGW\bin\gcc.exe
+COLLECT_LTO_WRAPPER=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/lto-wrapper.exe
+Target: mingw32
+Configured with: ../gcc-4.8.1/configure --prefix=/mingw --host=mingw32 --build=mingw32 --without-pic --enable-shared --enable-static --with-gnu-ld --enable-lto --enable-libssp --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,ada --disable-sjlj-exceptions --with-dwarf2 --disable-win32-registry --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gmp=/usr/src/pkg/gmp-5.1.2-1-mingw32-src/bld --with-mpc=/usr/src/pkg/mpc-1.0.1-1-mingw32-src/bld --with-mpfr= --with-system-zlib --with-gnu-as --enable-decimal-float=yes --enable-libgomp --enable-threads --with-libiconv-prefix=/mingw32 --with-libintl-prefix=/mingw --disable-bootstrap LDFLAGS=-s CFLAGS=-D_USE_32BIT_TIME_T
+Thread model: win32
+gcc version 4.8.1 (GCC) 
+COMPILER_PATH=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/;d:/kouluhommia/mingw/bin/../libexec/gcc/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/
+LIBRARY_PATH=d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/;d:/kouluhommia/mingw/bin/../lib/gcc/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/;d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4253995593.exe' '-mtune=generic' '-march=pentiumpro'
+ d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe -Bdynamic -o cmTryCompileExec4253995593.exe d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1 -Ld:/kouluhommia/mingw/bin/../lib/gcc -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../.. --whole-archive CMakeFiles\cmTryCompileExec4253995593.dir/objects.a --no-whole-archive --out-implib libcmTryCompileExec4253995593.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec4253995593/fast"]
+  ignore line: [D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec4253995593.dir\build.make CMakeFiles/cmTryCompileExec4253995593.dir/build]
+  ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp']
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec4253995593.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [D:\Kouluhommia\MinGW\bin\gcc.exe    -o CMakeFiles\cmTryCompileExec4253995593.dir\CMakeCCompilerABI.c.obj   -c "D:\Kouluhommia\programs\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTryCompileExec4253995593.exe]
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec4253995593.dir\link.txt --verbose=1]
+  ignore line: ["D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec4253995593.dir/objects.a]
+  ignore line: [D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec4253995593.dir/objects.a @CMakeFiles\cmTryCompileExec4253995593.dir\objects1.rsp]
+  ignore line: [D:\Kouluhommia\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTryCompileExec4253995593.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec4253995593.exe -Wl,--out-implib,libcmTryCompileExec4253995593.dll.a -Wl,--major-image-version,0,--minor-image-version,0   ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=D:\Kouluhommia\MinGW\bin\gcc.exe]
+  ignore line: [COLLECT_LTO_WRAPPER=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/lto-wrapper.exe]
+  ignore line: [Target: mingw32]
+  ignore line: [Configured with: ../gcc-4.8.1/configure --prefix=/mingw --host=mingw32 --build=mingw32 --without-pic --enable-shared --enable-static --with-gnu-ld --enable-lto --enable-libssp --disable-multilib --enable-languages=c,c++,fortran,objc,obj-c++,ada --disable-sjlj-exceptions --with-dwarf2 --disable-win32-registry --enable-libstdcxx-debug --enable-version-specific-runtime-libs --with-gmp=/usr/src/pkg/gmp-5.1.2-1-mingw32-src/bld --with-mpc=/usr/src/pkg/mpc-1.0.1-1-mingw32-src/bld --with-mpfr= --with-system-zlib --with-gnu-as --enable-decimal-float=yes --enable-libgomp --enable-threads --with-libiconv-prefix=/mingw32 --with-libintl-prefix=/mingw --disable-bootstrap LDFLAGS=-s CFLAGS=-D_USE_32BIT_TIME_T]
+  ignore line: [Thread model: win32]
+  ignore line: [gcc version 4.8.1 (GCC) ]
+  ignore line: [COMPILER_PATH=d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/]
+  ignore line: [d:/kouluhommia/mingw/bin/../libexec/gcc/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/bin/]
+  ignore line: [LIBRARY_PATH=d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/]
+  ignore line: [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4253995593.exe' '-mtune=generic' '-march=pentiumpro']
+  link line: [ d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe -Bdynamic -o cmTryCompileExec4253995593.exe d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1 -Ld:/kouluhommia/mingw/bin/../lib/gcc -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib -Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../.. --whole-archive CMakeFiles\cmTryCompileExec4253995593.dir/objects.a --no-whole-archive --out-implib libcmTryCompileExec4253995593.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o]
+    arg [d:/kouluhommia/mingw/bin/../libexec/gcc/mingw32/4.8.1/collect2.exe] ==> ignore
+    arg [-Bdynamic] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec4253995593.exe] ==> ignore
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib/crt2.o] ==> ignore
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtbegin.o] ==> ignore
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib]
+    arg [-Ld:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..] ==> dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..]
+    arg [--whole-archive] ==> ignore
+    arg [CMakeFiles\cmTryCompileExec4253995593.dir/objects.a] ==> ignore
+    arg [--no-whole-archive] ==> ignore
+    arg [--out-implib] ==> ignore
+    arg [libcmTryCompileExec4253995593.dll.a] ==> ignore
+    arg [--major-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [--minor-image-version] ==> ignore
+    arg [0] ==> ignore
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [-ladvapi32] ==> lib [advapi32]
+    arg [-lshell32] ==> lib [shell32]
+    arg [-luser32] ==> lib [user32]
+    arg [-lkernel32] ==> lib [kernel32]
+    arg [-lmingw32] ==> lib [mingw32]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc_eh] ==> lib [gcc_eh]
+    arg [-lmoldname] ==> lib [moldname]
+    arg [-lmingwex] ==> lib [mingwex]
+    arg [-lmsvcrt] ==> lib [msvcrt]
+    arg [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/crtend.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_eh]
+  remove lib [gcc]
+  remove lib [gcc_eh]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1] ==> [d:/Kouluhommia/MinGW/lib/gcc/mingw32/4.8.1]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc] ==> [d:/Kouluhommia/MinGW/lib/gcc]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../../mingw32/lib] ==> [d:/Kouluhommia/MinGW/mingw32/lib]
+  collapse library dir [d:/kouluhommia/mingw/bin/../lib/gcc/mingw32/4.8.1/../../..] ==> [d:/Kouluhommia/MinGW/lib]
+  implicit libs: [mingw32;moldname;mingwex;msvcrt;advapi32;shell32;user32;kernel32;mingw32;moldname;mingwex;msvcrt]
+  implicit dirs: [d:/Kouluhommia/MinGW/lib/gcc/mingw32/4.8.1;d:/Kouluhommia/MinGW/lib/gcc;d:/Kouluhommia/MinGW/mingw32/lib;d:/Kouluhommia/MinGW/lib]
+  implicit fwks: []
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec3571289148/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec3571289148.dir\build.make CMakeFiles/cmTryCompileExec3571289148.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3571289148.dir/CheckIncludeFiles.c.obj
+D:\Kouluhommia\MinGW\bin\gcc.exe    -o CMakeFiles\cmTryCompileExec3571289148.dir\CheckIncludeFiles.c.obj   -c D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c
+Linking C executable cmTryCompileExec3571289148.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec3571289148.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec3571289148.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec3571289148.dir/objects.a @CMakeFiles\cmTryCompileExec3571289148.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\gcc.exe       -Wl,--whole-archive CMakeFiles\cmTryCompileExec3571289148.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec3571289148.exe -Wl,--out-implib,libcmTryCompileExec3571289148.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp
+
+Run Build Command:D:/Kouluhommia/MinGW/bin/mingw32-make.exe "cmTryCompileExec2404986494/fast"
+D:/Kouluhommia/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTryCompileExec2404986494.dir\build.make CMakeFiles/cmTryCompileExec2404986494.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_progress_report D:\Kouluhommia\C++\SDL\Builds\CMakeFiles\CMakeTmp\CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2404986494.dir/CheckFunctionExists.c.obj
+D:\Kouluhommia\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles\cmTryCompileExec2404986494.dir\CheckFunctionExists.c.obj   -c "D:\Kouluhommia\programs\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"
+Linking C executable cmTryCompileExec2404986494.exe
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTryCompileExec2404986494.dir\link.txt --verbose=1
+"D:\Kouluhommia\programs\CMake 2.8\bin\cmake.exe" -E remove -f CMakeFiles\cmTryCompileExec2404986494.dir/objects.a
+D:\Kouluhommia\MinGW\bin\ar.exe cr CMakeFiles\cmTryCompileExec2404986494.dir/objects.a @CMakeFiles\cmTryCompileExec2404986494.dir\objects1.rsp
+D:\Kouluhommia\MinGW\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create    -Wl,--whole-archive CMakeFiles\cmTryCompileExec2404986494.dir/objects.a -Wl,--no-whole-archive  -o cmTryCompileExec2404986494.exe -Wl,--out-implib,libcmTryCompileExec2404986494.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lpthread -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+mingw32-make.exe[1]: Leaving directory 'D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/CMakeTmp'
+
+

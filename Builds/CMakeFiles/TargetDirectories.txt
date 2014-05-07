@@ -1,0 +1,2 @@
+D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/copy.dir
+D:/Kouluhommia/C++/SDL/Builds/CMakeFiles/quickescape.dir
