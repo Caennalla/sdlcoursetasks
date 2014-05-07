@@ -29,11 +29,11 @@
 
   <Overview>
     
-You are in the place where you woke up. Rats make occasionally 
-a brief visit to this cell, but are too fast for you to catch. 
-Cell walls and bed are dirty, it seems that cleaner lady has 
+You are in the place where you woke up. Rats make occasionally
+a brief visit to this cell, but are too fast for you to catch.
+Cell walls and bed are dirty, it seems that cleaner lady has
 not paid a visit for a while.
-    
+
 There is a door leading to corridor from here.
 </Overview>
 
@@ -488,3 +488,8 @@ Congratulations, you have finished the game!
     <Item id="ID_SLIPPERS" name="slippers" description="Comfortable-looking pair of pink slippers. Cute."/>
   </Items>
 </Player>
+
+<Font> 
+<path>res/OLDSSCH_.TTF</path>
+<size>16</size>
+</Font>

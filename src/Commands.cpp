@@ -8,6 +8,7 @@
 #include <Room.h>
 #include <tinyxml2.h>
 #include <boost/regex.hpp>
+#include <GameScene.h>
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 using namespace tinyxml2;
@@ -161,50 +162,74 @@ CommandUtils::Parse( const SDL_Event & event)
 		}
 		else if(event.key.keysym.sym == SDLK_s || event.key.keysym.sym == SDLK_DOWN){
 			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
-			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			if(current->GetNextRoom(South) != NULL){
+				Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+				//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.key.keysym.sym == SDLK_w || event.key.keysym.sym == SDLK_UP){
 			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
-			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			if(current->GetNextRoom(North) != NULL){
+			Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.key.keysym.sym == SDLK_a || event.key.keysym.sym == SDLK_LEFT){
 			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
-			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			if(current->GetNextRoom(West) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.key.keysym.sym == SDLK_d || event.key.keysym.sym == SDLK_RIGHT){
 			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
-			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			if(current->GetNextRoom(East) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 	case SDL_JOYBUTTONDOWN:
 		if(event.jbutton.button == 1){
 			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
-			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			if(current->GetNextRoom(South) != NULL){
+			Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jbutton.button == 0){
 			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
-			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			if(current->GetNextRoom(North) != NULL){
+			Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jbutton.button == 2){
 			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
-			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			if(current->GetNextRoom(West) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jbutton.button == 3){
 			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
-			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			if(current->GetNextRoom(East) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
@@ -216,25 +241,37 @@ CommandUtils::Parse( const SDL_Event & event)
 	case SDL_JOYHATMOTION:
 		if(event.jhat.value == SDL_HAT_DOWN){
 			MoveCommand *pCmd = new MoveCommand(South, current, current->GetNextRoom(South) );
-			if(current->GetNextRoom(South) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			if(current->GetNextRoom(South) != NULL){
+			Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()+32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jhat.value == SDL_HAT_UP){
 			MoveCommand *pCmd = new MoveCommand(North, current, current->GetNextRoom(North) );
-			if(current->GetNextRoom(North) != NULL) Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			if(current->GetNextRoom(North) != NULL){
+			Game::GetInstance()->GetPlayer().Sety(Game::GetInstance()->GetPlayer().Gety()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jhat.value == SDL_HAT_LEFT){
 			MoveCommand *pCmd = new MoveCommand(West, current, current->GetNextRoom(West) );
-			if(current->GetNextRoom(West) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			if(current->GetNextRoom(West) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()-32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}
 		else if(event.jhat.value == SDL_HAT_RIGHT){
 			MoveCommand *pCmd = new MoveCommand(East, current, current->GetNextRoom(East) );
-			if(current->GetNextRoom(East) != NULL) Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			if(current->GetNextRoom(East) != NULL){
+			Game::GetInstance()->GetPlayer().Setx(Game::GetInstance()->GetPlayer().Getx()+32);
+			//Game::GetInstance()->GetSDLApp()->GetCurrentScene()->NewText(Game::GetInstance()->GetSDLApp()->GetRenderer());
+			}
 			return pCmd;
 			break;
 		}

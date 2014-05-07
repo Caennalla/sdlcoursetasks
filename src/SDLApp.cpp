@@ -1,7 +1,12 @@
 #include <SDLApp.h>
 #include <Game.h>
 #include <stdexcept>
+#include <Scene.h>
+#include <IntroScene.h>
+#include <tinyxml2.h>
+
 using namespace std;
+using namespace tinyxml2;
 
 SDLApp::SDLApp(){
 	//Initializes the SDL components
@@ -16,9 +21,13 @@ SDLApp::SDLApp(){
 	if(retFlags != initFlags){
 		throw runtime_error(IMG_GetError());
 	}
-	//The window and renderer pointers are set to NULL for safety
+	// Initialize SDL_ttf library
+	if ( TTF_Init() < 0 ) throw runtime_error(TTF_GetError());
+	//The window, current scene, renderer pointers are set to NULL for safety
 	window_ = NULL;
 	renderer_ = NULL;
+	currentScene_ = NULL;
+
 	//If there is a joystick when the game starts, it will be used
 	if(SDL_NumJoysticks() > 0){
 		stick_ = SDL_JoystickOpen(0);
@@ -35,6 +44,7 @@ SDLApp::~SDLApp(){
 	SDL_DestroyRenderer(renderer_);
 	SDL_JoystickClose(0);
 	stick_ = NULL;
+	TTF_Quit();
 	IMG_Quit();
 	SDL_Quit();
 }
@@ -49,11 +59,23 @@ SDLApp::Init(const string & title, int width, int height, Uint32 flags){
 	}
 	
 	//Creates the renderer element for the given window
-	renderer_ = SDL_CreateRenderer(window_, -1, 
-	SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_SOFTWARE);
 	if (renderer_ == nullptr){
 	cout << "SDL_CreateRenderer Error: " << SDL_GetError() << endl;
 	}
+	
+	//This will make the time go rolling
+	time_ = SDL_GetTicks();
+	
+	//Loads the font
+	this->LoadFont("res/dungeon0.xml");
+	
+	//Sets the intro scene
+	IntroScene* Intro_ = new IntroScene();
+	Intro_->SetName("Intro");
+	Intro_->Init(renderer_);
+	AddScene(Intro_);
+	SetCurrentScene("Intro");
 
 }
 //// Returns the renderer
@@ -84,9 +106,23 @@ SDLApp::Load(SDL_Texture * tex){
 void 
 SDLApp::Render(){
 	
+	if(currentScene_) currentScene_->Render(renderer_);
 	SDL_RenderPresent(renderer_);
 	SDL_RenderClear(renderer_);
 	
+}
+
+void 
+SDLApp::Update(){
+	const int MIN_ALLOWED_TIME_STEP_MS = 5;
+	float seconds = 0.0f;
+	Uint32 slice = SDL_GetTicks() - time_;
+	if (slice >= MIN_ALLOWED_TIME_STEP_MS){
+		if(currentScene_)
+		float seconds = (float)slice * 0.001f;
+		currentScene_->Update(seconds);
+		time_ = SDL_GetTicks();
+	}
 }
 
 void
@@ -119,27 +155,23 @@ SDLApp::HandleInput(){
 	while (SDL_PollEvent(&ev)){
 		switch (ev.type){
 		case SDL_QUIT:
-			
+			{
+				currentScene_->OnEvent(ev);
+			}
 			break;
 		case SDL_KEYDOWN:
 			{
-				Command *pCmd = CommandUtils::Parse(ev);
-				pCmd->Execute(*Game::GetInstance());
-				delete pCmd;
+				currentScene_->OnEvent(ev);
 			}
 			break;
 		case SDL_JOYBUTTONDOWN:
 			{
-				Command *pCmd = CommandUtils::Parse(ev);
-				pCmd->Execute(*Game::GetInstance());
-				delete pCmd;
+				currentScene_->OnEvent(ev);
 			}
 			break;
 		case SDL_JOYHATMOTION:
 			{
-				Command *pCmd = CommandUtils::Parse(ev);
-				pCmd->Execute(*Game::GetInstance());
-				delete pCmd;
+				currentScene_->OnEvent(ev);
 			}
 			break;
 
@@ -157,3 +189,69 @@ SDLApp::HandleInput(){
 	}
 	
 }
+
+void 
+SDLApp::AddScene(Scene * scene){
+	if (scenes_.find(scene->GetName()) != scenes_.end()){
+		ostringstream ss("Scene with name ");
+		ss << scene->GetName() << " already exists!";
+		throw runtime_error(ss.str());
+	}
+	scenes_[scene->GetName()] = scene;
+}
+
+void 
+SDLApp::DeleteScene(const std::string & name){
+	auto it = scenes_.find(name);
+	if(it != scenes_.end()){
+		delete it->second;
+		scenes_.erase(it);
+	}
+	else{
+		ostringstream ss("No scene with name ");
+		ss << name << " doesn't exist";
+		throw runtime_error(ss.str());
+	}
+}
+
+void 
+SDLApp::SetCurrentScene(const std::string & name){
+	auto it = scenes_.find(name);
+	if (it != scenes_.end()){
+		currentScene_= it->second;
+	}
+}
+
+Scene * 
+SDLApp::GetCurrentScene(){
+	return currentScene_;
+}
+
+SDL_Window * 
+SDLApp::GetWindow(){
+	return window_;
+}
+
+TTF_Font *
+SDLApp::LoadFont(const std::string & filename){
+	XMLDocument doc;
+	doc.LoadFile(filename.c_str());
+	std::string path;
+	std::string size;
+	//Font loading
+	XMLElement *pElem = doc.FirstChildElement("Font");
+	path = pElem->FirstChildElement("path")->GetText();
+	size = pElem->FirstChildElement("size")->GetText();
+	
+	
+	TTF_Font* font = TTF_OpenFont(path.c_str(), atoi(size.c_str()));
+	if(font == NULL){
+		throw runtime_error(TTF_GetError());
+	}
+	
+	return font;
+}
+
+
+
+

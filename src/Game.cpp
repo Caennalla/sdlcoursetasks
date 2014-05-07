@@ -10,6 +10,8 @@
 #include <RoomFactory.h>
 #include <Logger.h>
 #include <SDL.h>
+#include <Scene.h>
+#include <GameScene.h>
 ////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 using namespace tinyxml2;
@@ -62,52 +64,18 @@ Game::~Game()
 ////////////////////////////////////////////////////////////////////////////////
 void Game::Play()
 {
-  const string title = "Quickescape";
-  //Creates a new SDLApp, so we can use the functions; also initializes SDL
-  SDLApp * SDLMain = new SDLApp();
-  //This function creates the window and renderer
-  SDLMain->Init(title, 640, 400);
-  //We set the background 
-  SDL_SetRenderDrawColor(SDLMain->GetRenderer(), 0,0,0,0);
-  SDL_RenderClear(SDLMain->GetRenderer());
-  //Splash image
-  SDL_Texture* splash = SDLMain->LoadTexture("res/main.bmp");
-  SDLMain->Load(splash);
-  SDLMain->Render();
-  SDL_Delay(3000);
-  delete SDLMain;
-  
-  //Creates the main game screen
-  SDLApp *SDLGame = new SDLApp();
-  SDLGame->Init(title, 1000, 700);
-  SDL_SetRenderDrawColor(SDLMain->GetRenderer(), 0,0,0,0);
-  SDL_RenderClear(SDLMain->GetRenderer());
-  
-  
-  
-  //Clears the first image
-  SDL_SetRenderDrawColor(SDLGame->GetRenderer(), 0,0,0,0);
-  SDLGame->Render();
-  //Textures for all the other images used
-  SDL_Texture* cover = SDLGame->LoadTexture("res/cover.png");
-  SDL_Texture* pages = SDLGame->LoadTexture("res/pages.png");
-  //Loads the starting screen
-  SDLGame->Load(cover);
-  SDLGame->Load(pages);
-  //Texture for the player
-  SDL_Texture* plrtex = SDLGame->LoadTexture("res/player0.png");
-  //Load the player, for now the player will always start from the middle
-  GetPlayer().Sety(350);
-  GetPlayer().Setx(500);
-  SDLGame->LoadPlayer(plrtex, GetPlayer().Getx(), GetPlayer().Gety());
-  SDLGame->Render();
-  
-
-  
-  
-  //The original game starts
   LoadMap("res/dungeon0.xml");
   CommandUtils::Load("res/commands.xml");
+  Room & room = *GetCurrentRoom();
+  
+  const string title = "Quickescape";
+  //Creates a new SDLApp, so we can use the functions; also initializes SDL
+  SDLMain = new SDLApp();
+  //This function creates the window and renderer
+  SDLMain->Init(title, 1000, 700);
+  //Splash image
+  SDLMain->Render();
+
   for( auto a : m_Rooms )
   {
     if ( a.second == NULL )  
@@ -118,11 +86,13 @@ void Game::Play()
     }
   }
 
-  cout << m_Story << "\n";
+  // cout << m_Story << "\n";
 
   while ( GetProperty("running") ) 
   {
-    Room & room = *GetCurrentRoom();
+    Scene* scene_ = SDLMain->GetCurrentScene();
+    room = *GetCurrentRoom();
+	scene_->NewText(SDLMain->GetRenderer());
     bool visited;
     
     if ( (room.HasProperty("visited") == false) || 
@@ -130,15 +100,12 @@ void Game::Play()
     {    
       room.SetProperty("visited", true);
     }  
-	
-    HandleInput();
-	SDLGame->Load(cover);
-	SDLGame->Load(pages);
-	SDLGame->LoadPlayer(plrtex, GetPlayer().Getx(), GetPlayer().Gety());
-	SDLGame->Render();
+	SDLMain->Update();
+    SDLMain->HandleInput();
+	SDLMain->Render();
   }  
   
-  delete SDLGame;
+  delete SDLMain;
   //Save("res/dungeon0.xml");
 
 }
@@ -530,4 +497,8 @@ Game::Execute( NullCommand & cmd )
   
 }
 ////////////////////////////////////////////////////////////////////////////////
+SDLApp *
+Game::GetSDLApp(){
+	return SDLMain;
+}
 

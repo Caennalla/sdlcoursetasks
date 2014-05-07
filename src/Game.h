@@ -28,6 +28,7 @@ private:
   Room *      m_pCurrentRoom;
   Player      m_Player;
   std::string m_Story;
+  SDLApp*	  SDLMain;
   static Game *m_pInstance;
   Game();
   virtual ~Game();
@@ -57,6 +58,7 @@ public:
   void Execute( InventoryCommand & cmd);
   void Execute( LookCommand & cmd);
   void Execute( NullCommand & cmd);
+  SDLApp * GetSDLApp();
 };
 ////////////////////////////////////////////////////////////////////////////////
 #endif
